@@ -6,8 +6,8 @@ import keyboard
 
 translation = {
     ".-": "A",
-    "-...":"B",
-    "-.-.":"C",
+    "-...": "B",
+    "-.-.": "C",
     "-..": "D",
     ".": "E",
     "..-.": "F",
@@ -16,31 +16,35 @@ translation = {
     "..": "I",
     "-.-": "K",
     ".-..": "L",
-    "--":"M",
+    "--": "M",
     "-.": "N",
     "---": "O",
-    ".--.":"P",
-    "--.-":"Q",
+    ".--.": "P",
+    "--.-": "Q",
     ".-.": "R",
     "...": "S",
     "-": "T",
-    "..-":"U",
-    "...-":"V",
-    ".--":"W",
-    "-..-":"X",
-    "-.--":"Y",
+    "..-": "U",
+    "...-": "V",
+    ".--": "W",
+    "-..-": "X",
+    "-.--": "Y",
     "--..": "Z",
 }
+
 
 def record():
     something = keyboard.record(until="Enter")
 
     print(list(map(lambda i: i.name, something)))
+
+
 record()
+
+
 def fromWav(file):
 
     sampleRate, audio = wavfile.read(file)
-
 
     # Clean audio
     audio = np.abs(audio - audio.max() / 2) - 0.5
@@ -74,8 +78,9 @@ def fromWav(file):
     print(condensed)
     return condensed
 
+
 # Calculate lengths of each type of sound
-condensed = fromWav("morseAudio.wav")
+condensed = fromWav("audio/morseAudio.wav")
 minOn = 99999
 maxOn = 0
 minOff = 99999
