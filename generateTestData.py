@@ -1,5 +1,5 @@
 import random
-from MorseMapping import MorseMapping
+from morseMapping import MorseMapping
 
 # Generate a series of morse code sentenses including some noise and varying bleep lengths
 
