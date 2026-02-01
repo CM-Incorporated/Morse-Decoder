@@ -2,20 +2,12 @@ from scipy.io import wavfile
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import keyboard
 from morseMapping import MorseMapping
 
 mapping = MorseMapping()
 translation = mapping.morse_to_letter
 
 
-def record():
-    something = keyboard.record(until="Enter")
-
-    print(list(map(lambda i: i.name, something)))
-
-
-record()
 
 
 def fromWav(file):
