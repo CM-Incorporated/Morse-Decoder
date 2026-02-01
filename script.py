@@ -2,7 +2,7 @@ from scipy.io import wavfile
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from morseMapping import MorseMapping
+from utils.morseMapping import MorseMapping
 
 mapping = MorseMapping()
 translation = mapping.morse_to_letter
