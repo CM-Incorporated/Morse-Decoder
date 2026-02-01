@@ -3,34 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import keyboard
+from morseMapping import MorseMapping
 
-translation = {
-    ".-": "A",
-    "-...": "B",
-    "-.-.": "C",
-    "-..": "D",
-    ".": "E",
-    "..-.": "F",
-    "--.": "G",
-    "....": "H",
-    "..": "I",
-    "-.-": "K",
-    ".-..": "L",
-    "--": "M",
-    "-.": "N",
-    "---": "O",
-    ".--.": "P",
-    "--.-": "Q",
-    ".-.": "R",
-    "...": "S",
-    "-": "T",
-    "..-": "U",
-    "...-": "V",
-    ".--": "W",
-    "-..-": "X",
-    "-.--": "Y",
-    "--..": "Z",
-}
+mapping = MorseMapping()
+translation = mapping.morse_to_letter
 
 
 def record():
